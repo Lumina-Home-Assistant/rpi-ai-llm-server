@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/<context>/<prompt>')
 def prompt_(context, prompt):
     response = ollama.chat(
-        model='llama3.1', messages=[
+        model='gemma:2b', messages=[
             {
                 'role': 'system',
                 'context': context,
